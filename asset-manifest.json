@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/taxi-app/static/css/main.044f4d72.chunk.css",
+    "main.js": "/taxi-app/static/js/main.55c2b9cc.chunk.js",
+    "main.js.map": "/taxi-app/static/js/main.55c2b9cc.chunk.js.map",
+    "runtime-main.js": "/taxi-app/static/js/runtime-main.d7c6e21b.js",
+    "runtime-main.js.map": "/taxi-app/static/js/runtime-main.d7c6e21b.js.map",
+    "static/js/2.653678ff.chunk.js": "/taxi-app/static/js/2.653678ff.chunk.js",
+    "static/js/2.653678ff.chunk.js.map": "/taxi-app/static/js/2.653678ff.chunk.js.map",
+    "index.html": "/taxi-app/index.html",
+    "precache-manifest.0a22b65cb03a589dd3ae94970f92e1ac.js": "/taxi-app/precache-manifest.0a22b65cb03a589dd3ae94970f92e1ac.js",
+    "service-worker.js": "/taxi-app/service-worker.js",
+    "static/css/main.044f4d72.chunk.css.map": "/taxi-app/static/css/main.044f4d72.chunk.css.map",
+    "static/js/2.653678ff.chunk.js.LICENSE.txt": "/taxi-app/static/js/2.653678ff.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d7c6e21b.js",
+    "static/js/2.653678ff.chunk.js",
+    "static/css/main.044f4d72.chunk.css",
+    "static/js/main.55c2b9cc.chunk.js"
+  ]
+}
