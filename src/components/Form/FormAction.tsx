@@ -15,17 +15,19 @@ function FormAction(props: any) {
     const handleClickSendButton = () => {
         const {address, isValid, coord, sendOrder, findedCrew} = props
 
-        const suitableCar = props.findedCrew && props.findedCrew.length ? props.findedCrew[0] : undefined
+        const suitableCar = findedCrew && findedCrew.length ? findedCrew[0] : undefined
 
-        isValid && coord && suitableCar && sendOrder({
-            source_time: getDateFormat(),
-            addresses: [{
-                address: address,
-                lat: coord[0],
-                lon: coord[1]
-            }],
-            crew_id: suitableCar.crew_id
-        })
+        if (isValid && coord && suitableCar) {
+            sendOrder({
+                source_time: getDateFormat(),
+                addresses: [{
+                    address: address,
+                    lat: coord[0],
+                    lon: coord[1]
+                }],
+                crew_id: suitableCar.crew_id
+            })
+        }
     }
 
     return (

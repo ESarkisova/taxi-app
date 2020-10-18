@@ -35,8 +35,8 @@ function CarList(props: CarListProps) {
 
     return (
         <Card>
-            {props.findedCrew.code && `Возникли ошибки при получении данных ${props.findedCrew.descr}`}
-            {array && array?.map(crew => <CarLine key={crew.crew_id} {...crew}/>)}
+            {props.findedCrew.code !== 0 && `Возникли ошибки при получении данных ${props.findedCrew.descr}`}
+            {array?.map(crew => <CarLine key={crew.crew_id} {...crew}/>)}
         </Card>
     )
 }

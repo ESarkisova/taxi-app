@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {connect} from 'react-redux'
 import TextField from '@material-ui/core/TextField'
 import {makeStyles} from "@material-ui/core/styles"
 import {RootState} from "../../store"
-import {CoordType, MainState} from "../../store/types"
-import {changeAddress, setCoord} from "../../store/actions"
+import {CoordType} from "../../store/types"
+import {changeAddress} from "../../store/actions"
 
 const useStyles = makeStyles({
     container: {
@@ -32,7 +32,7 @@ function Form(props: any) {
         changeAddress(e.target.value)
     }
 
-    const getHelperText = !props.isValid ? 'Введите корректный адрес' : ''
+    const getHelperText = !props.isValid && Boolean(props.address) ? 'Введите корректный адрес' : ''
 
     return (
         <form className={classes.container} noValidate autoComplete="off">
