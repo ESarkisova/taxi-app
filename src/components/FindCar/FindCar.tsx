@@ -28,12 +28,16 @@ const useStyles = makeStyles({
 function FindCar(props: FindCarState) {
     const classes = useStyles();
 
+    const suitableCar = props.findedCrew && props.findedCrew.length ? props.findedCrew[0] : undefined
+
+    if (!suitableCar) return null
+
     return (
         <div className={classes.container}>
             <Typography className={classes.h} variant="h6" component="h3">
                 Подходящий экипаж
             </Typography>
-            {props.findedCrew[0] && <Car {...props.findedCrew[0]}/>}
+            {suitableCar && <Car {...suitableCar}/>}
         </div>
     );
 }

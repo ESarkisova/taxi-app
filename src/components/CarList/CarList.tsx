@@ -31,10 +31,12 @@ function CarList(props: CarListProps) {
 
     if (!props.findedCrew) return null
 
+    const array = props.crewSort && props.crewSort.length  ? props.crewSort : undefined
+
     return (
         <Card>
             {props.findedCrew.code && `Возникли ошибки при получении данных ${props.findedCrew.descr}`}
-            {props.crewSort.length && props.crewSort.map((crew: CrewDataType) => <CarLine key={crew.crew_id} {...crew}/>)}
+            {array && array?.map(crew => <CarLine key={crew.crew_id} {...crew}/>)}
         </Card>
     )
 }
